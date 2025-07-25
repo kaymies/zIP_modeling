@@ -2,13 +2,13 @@
 
 Contains results of parameter search from search_params_bestfit.m,
 of the models that best reproduce the intersection-point-height (zIP) data
-from each data group (unimpaired, paretic, nonparetic).
+from each data group.
 
 ## File content
 
 Each file contains the following variables:
 
-    BestFitParams - struct containing the parameter values (beta, omega, sigma_r) for the best-fit model for that group
+    BestFitParams - struct containing the parameter values for the best-fit model for that group
 
     Input         - struct containing input to computeAnalyticIP.m, including fields:
                     f: frequency at which to compute zIP
