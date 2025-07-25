@@ -34,3 +34,5 @@ dos Santos, D. A., Fukuchi, C. A., Fukuchi, R. K., & Duarte, M. (2017). A data s
 Shiozawa, K., Lee, J., Russo, M. et al. (2021). Frequency-dependent force direction elucidates neural control of balance. J NeuroEngineering Rehabil 18, 145. https://doi.org/10.1186/s12984-021-00907-2
 
 Sugimoto-Dimitrova, R., Shiozawa, K., Gruben, K. G., & Hogan, N. (2024). Frequency-domain patterns in foot-force line-of-action: an emergent property of standing balance control. Journal of Neurophysiology. https://doi.org/10.1152/jn.00084.2024
+
+Shiozawa, K., Sugimoto-Dimitrova, R., Gruben, K. G., & Hogan, N. (2024). Human foot force suggests different balance control between younger and older adults. Journal of Neurophysiology. https://doi.org/10.1152/jn.00084.2024
