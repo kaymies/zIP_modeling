@@ -53,10 +53,10 @@ for index_group = 1:n_groups
     tic
     for b = 1:length(params.beta)
         for s = 1:length(params.sigma_r)
-            % for o = 1:length(params.omega)
+            for o = 1:length(params.omega)
                 input_struct.controller_params.R = ...
-                    alpha*[params.beta(b) 0;...
-                           0 1/params.beta(b)];            
+                    alpha*[params.beta(b) params.omega(o);...
+                           params.omega(o) 1/params.beta(b)];            
                 input_struct.motorNoiseRatio = params.sigma_r(s);
     
                 % check that R is positive definite (as required by LQR)
@@ -66,23 +66,23 @@ for index_group = 1:n_groups
                     zIP_model = NaN(size(input_struct.f));
                 end
     
-                rmse_results(b,s) = sqrt(mean((zIP_model-zIP_human).^2));
-            % end
+                rmse_results(b,s,o) = sqrt(mean((zIP_model-zIP_human).^2));
+            end
         end
     end
     toc
     
     %% Get best-fit parameters
     [v_min,loc_min] = min(abs(rmse_results(:)));
-    [b_min,s_min] = ind2sub(size(rmse_results),loc_min);
+    [b_min,s_min,o_min] = ind2sub(size(rmse_results),loc_min);
     params_bestfit.beta = params.beta(b_min);
     params_bestfit.sigma_r = params.sigma_r(s_min);
-    % params_bestfit.omega = params.omega(o_min);
+    params_bestfit.omega = params.omega(o_min);
     
     disp(' ')
     disp('Best-fit-model parameters:')
     disp(['beta: ' num2str(params_bestfit.beta)])
-    % disp(['omega: ' num2str(params_bestfit.omega)])
+    disp(['omega: ' num2str(params_bestfit.omega)])
     disp(['sigma_r: ' num2str(params_bestfit.sigma_r)])
     disp(['RMSE: ' num2str(v_min)])
     disp(' ')
