@@ -7,7 +7,7 @@
 run setup
 
 %% Loop through best-fit models for 1) unimpaired, 2) paretic, 3) nonparetic
-for index_group = 1:3
+for index_group = 1:n_groups
 
     figure;hold on;
 
@@ -20,7 +20,8 @@ for index_group = 1:3
 
     input_struct = model_struct.Input;
     beta = model_struct.BestFitParams.beta;
-    omega = model_struct.BestFitParams.omega;
+    % omega = model_struct.BestFitParams.omega;
+    omega = 0;
     input_struct.controller_params.R = alpha*[beta omega; omega 1/beta];  % alpha = 1e6, initialized in setup.m   
     input_struct.controller_params.Q = eye(4);
     input_struct.motorNoiseRatio = model_struct.BestFitParams.sigma_r;

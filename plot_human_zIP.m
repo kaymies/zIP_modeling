@@ -9,7 +9,7 @@ run setup
 fh = figure;hold on;
 
 %% Loop through data files for 1) unimpaired, 2) paretic, 3) nonparetic
-for index_group = 1:3
+for index_group = 1:n_groups
 
     human_struct = load(sprintf('%s.mat',data_filenames{index_group}));
     f_Hz = human_struct.Frequency;

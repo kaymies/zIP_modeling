@@ -10,7 +10,6 @@ clear;clc;
 run setup
 
 %% Loop through data files
-n_groups = length(data_types);
 for index_group = 1:n_groups
 
     clear human_struct rmse_results params_bestfit
@@ -38,8 +37,8 @@ for index_group = 1:n_groups
     input_struct.controller_params.R = alpha*eye(2); % alpha = 1e6, initialized in setup.m
     
     %% Parameters to search through
-    params.beta = [0.01,0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3];
-    params.sigma_r = [0.01,0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3,5,10,15,20];
+    params.beta = 0.15:0.01:0.45;
+    params.sigma_r = [0.01,0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
     % params.omega = -1:0.1:1;
     
     % Create empty array to log errors

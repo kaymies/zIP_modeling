@@ -14,11 +14,11 @@ run search_params_bestfit  % Run global parameter search to find model
 
 %% Generate figures from paper:
 
-run plot_human_zIP         % Fig. 1 - zIP from human data
+run plot_human_zIP         % zIP from human data
 
 
-run plot_model_zIP         % Fig. 3 - zIP from best-fit model
+run plot_model_zIP         % zIP from best-fit model
 
 
-run plot_stiffness_ellipse % Fig. 4 - ellipse-circle representation of 
-                           %          apparent stiffness of best-fit models
+run plot_stiffness_ellipse % ellipse-circle representation of 
+                           % apparent stiffness of best-fit models

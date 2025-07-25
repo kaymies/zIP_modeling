@@ -12,6 +12,7 @@ set(0,'Defaultfigurecolor',[1 1 1]);
 % Constant parameters used throughout
 data_filenames = {'dosSantos2017_old','dosSantos2017_young'};
 data_types = {'Older','Younger'};
+n_groups = length(data_types);
 colors = [0    0.447    0.741
            0.850    0.325    0.098];
 alpha = 1e6;

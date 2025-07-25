@@ -11,7 +11,7 @@ fh = figure;hold on;
 % Print best-fit gain matrices and K_ratio
 disp(' ')
 disp('Best-fit gain and K_ratio:')
-for index_group = 1:3
+for index_group = 1:n_groups
     disp(' ')
     disp([data_types{index_group} ' group:'])
     disp(' ')
@@ -21,7 +21,8 @@ for index_group = 1:3
     lumped_params = model_struct.Input.lumped_params;
 
     beta = model_struct.BestFitParams.beta;
-    omega = model_struct.BestFitParams.omega;
+    omega = 0;
+    % omega = model_struct.BestFitParams.omega;
     R = alpha*[beta omega; omega 1/beta]; % alpha = 1e6, initialized in setup.m
     Q = eye(4);
 
