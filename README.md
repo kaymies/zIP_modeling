@@ -25,6 +25,8 @@ Code for modeling the intersection point of human quiet balance and quantifying 
 ## Acknowledgements:
 The simulation code is largely based on [Shiozawa et al. (2021)](https://doi.org/10.1186/s12984-021-00907-2), while the [zIP code](https://github.com/rikasd/zIP_spectralmethod) is based on [Sugimoto-Dimitrova et al. (2024)](https://doi.org/10.1152/jn.00084.2024).
 
+The analysis of older and younger adults have been published in [Shiozawa et al. (2024)](https://doi.org/10.1152/jn.00161.2024).
+
 ## References:
 
 dos Santos, D. A., Fukuchi, C. A., Fukuchi, R. K., & Duarte, M. (2017). A data set with kinematic and ground reaction forces of human balance. PeerJ, 2017(7), 1–17. https://doi.org/10.7717/peerj.3626
